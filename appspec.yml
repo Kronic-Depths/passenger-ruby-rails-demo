@@ -8,7 +8,7 @@ permissions:
     owner: myappuser
 hooks:
   AfterInstall:
-    - location: deploy/bundle_install
+    - location: deploy/after_install
       timeout: 300
       runas: myappuser
   ApplicationStart:
