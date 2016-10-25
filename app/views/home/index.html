@@ -7,8 +7,10 @@
 
 <% if defined?(BCrypt) %>
   <p>And you have Bcrypt installed</p>
+<% else %>
+  <p>Correctly did not find BCrypt</p>
 <% end %>
 
-<pre>
-<%= ENV.to_yaml %>
-</pre>
+<p>
+The env var: <%= ENV['SOME_ENV_VAR'] %>
+</p>
