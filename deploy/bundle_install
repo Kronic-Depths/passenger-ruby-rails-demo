@@ -4,7 +4,7 @@ CURRENT=/var/www/myapp/current
 LAST=/var/www/myapp/deploys/last
 DEST=/var/www/myapp/deploys/${DEPLOYMENT_ID}
 
-env > /tmp/env
+echo "mv $LAST $DEST" > /tmp/log
 
 mv $LAST $DEST
 cd $DEST
