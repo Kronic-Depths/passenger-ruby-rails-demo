@@ -1,6 +1,12 @@
 #!/bin/sh
 
-pwd > /tmp/pwd
+CURRENT=/var/www/myapp/current
+LAST=/var/www/myapp/deploys/last
+DEST=/var/www/myapp/deploys/$DEPLOYMENT_ID
+
+mv $LAST $DEST
+cd $DEST
 bundle install --deployment --without development test
 bundle exec rake assets:precompile db:migrate RAILS_ENV=production
+ln -sfn $DEST $CURRENT
 

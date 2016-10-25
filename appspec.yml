@@ -2,7 +2,8 @@ version: 0.0
 os: linux
 files:
   - source: ./
-    destination: /var/www/myapp/code
+    destination: /var/www/myapp/deploys/last
+    runas: myappuser
 hooks:
   AfterInstall:
     - location: deploy/bundle_install
