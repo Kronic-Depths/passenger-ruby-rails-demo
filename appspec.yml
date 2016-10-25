@@ -4,8 +4,8 @@ files:
   - source: ./
     destination: /var/www/myapp/deploys/last
 permissions:
-  object: /var/www/myapp
-  owner: myappuser
+  - object: /var/www/myapp
+    owner: myappuser
 hooks:
   AfterInstall:
     - location: deploy/bundle_install
