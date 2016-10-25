@@ -4,3 +4,7 @@
 <% else %>
   <p>You are not running this app in Passenger. Please use <code>bundle exec passenger start</code>.</p>
 <% end %>
+
+<% if defined?(BCrypt) %>
+  <p>And you have Bcrypt installed</p>
+<% end %>

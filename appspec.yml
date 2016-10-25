@@ -1,0 +1,15 @@
+version: 0.0
+os: linux
+files:
+  - source: ./
+    destination: /var/www/myapp/code
+hooks:
+  AfterInstall:
+    - location: deploy/bundle_install
+      timeout: 300
+      runas: myappuser
+  ApplicationStart:
+    - location: deploy/restart
+      timeout: 300
+      runas: myappuser
+

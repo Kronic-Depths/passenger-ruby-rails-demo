@@ -1,0 +1,4 @@
+#!/bin/sh
+
+passenger-config restart-app /var/www/myapp
+
