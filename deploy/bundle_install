@@ -2,7 +2,9 @@
 
 CURRENT=/var/www/myapp/current
 LAST=/var/www/myapp/deploys/last
-DEST=/var/www/myapp/deploys/$DEPLOYMENT_ID
+DEST=/var/www/myapp/deploys/${DEPLOYMENT_ID}
+
+env > /tmp/env
 
 mv $LAST $DEST
 cd $DEST
