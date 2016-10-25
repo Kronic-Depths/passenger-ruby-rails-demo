@@ -13,3 +13,4 @@ cd $DEST
 bundle install --deployment --without development test
 bundle exec rake assets:precompile db:migrate RAILS_ENV=production
 ln -sfn $DEST $CURRENT
+echo $DEPLOYMENT_ID > $DEST/config/deployment_id
