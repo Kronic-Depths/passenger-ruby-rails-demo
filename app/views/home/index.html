@@ -6,11 +6,11 @@
 <% end %>
 
 <% if defined?(BCrypt) %>
-  <p>And you have Bcrypt installed</p>
+  <p>Bcrypt is installed</p>
 <% else %>
-  <p>Correctly did not find BCrypt</p>
+  <p>BCrypt is not installed</p>
 <% end %>
 
 <p>
-The env var: <%= ENV['SOME_ENV_VAR'] %>
+  ENV['SOME_ENV_VAR']: <%= ENV['SOME_ENV_VAR'] %>
 </p>

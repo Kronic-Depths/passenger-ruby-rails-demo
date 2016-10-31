@@ -2,17 +2,17 @@ version: 0.0
 os: linux
 files:
   - source: ./
-    destination: /var/www/myapp/deploys/last
+    destination: /var/www/app/deploys/last
 permissions:
-  - object: /var/www/myapp
-    owner: myappuser
+  - object: /var/www/app
+    owner: app
 hooks:
   AfterInstall:
     - location: deploy/after_install
       timeout: 300
-      runas: myappuser
+      runas: app
   ApplicationStart:
     - location: deploy/restart
       timeout: 300
-      runas: myappuser
+      runas: app
 
